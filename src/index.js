@@ -9,7 +9,6 @@ import {
   QueryClientProvider,
 } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import './i18n';
 
 const queryClient = new QueryClient();
 const rootElement = document.getElementById("root");
