@@ -1,21 +1,10 @@
-.App {
+.App, .Loader, .Table, .Error {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-header, .Loader-header, .Table-header, .Error-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +13,59 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body, .Loader-body, .Table-body, .Error-body {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
+.Body {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-footer, .Loader-footer, .Table-footer, .Error-footer {
+  padding-bottom: 50px;
+  background-color: #282c34;
+  min-height: 20vh;
+  display: block;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Loader:empty {
+  position: sticky;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 0.1em solid rgba(56, 56, 56, 0.2);
+  border-left: 0.1em solid #dadada;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
